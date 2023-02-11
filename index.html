@@ -1,21 +1,58 @@
 <html>
 <head>
 <style>
-body { background-color: #000; }
-.container {
-    max-width: 500px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgb(0 63 103 / 10%);
-    padding: 2rem;
-    margin: auto;
-}
+    body {
+        background-color: #000; 
+    }
+    .outer-container { 
+        min-height: 100vh;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    .main-container {
+        display: grid;
+        grid-template-rows: [left-start center-start right-start] 1fr [left-end center-end right-end];
+        grid-template-columns: [left-start center-start] 1fr [left-end right-start] 1fr [center-end right-end];
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-column-gap: 160px;
+        -moz-column-gap: 160px;
+        column-gap: 160px;
+        grid-column-gap: calc(var(--outer-padding)*2);
+        -moz-column-gap: calc(var(--outer-padding)*2);
+        column-gap: calc(var(--outer-padding)*2);
+        width: 100%;
+        padding: 80px;
+        padding: var(--outer-padding);
+        min-height: 100vh;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    .inner-container {
+        width: var(--prompt-width);
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        white-space: normal;
+        background-color: none;
+        border-radius: 5px;
+        border-radius: var(--border-radius-outer);
+        grid-area: var(--page-background-alignment);
+    }
 </style>
 <script async src="https://sdk.arengu.com/forms.js"></script>
 </head>
 <body>
-  <div class="container">
-  <div data-arengu-form-id="167606036368751153"></div>
+  <div class="outer-container">
+      <main class="main-container">
+          <section class="inner-container">
+            <div data-arengu-form-id="167606036368751153"></div>
+          </section>
+      </main>
   </div>
 </body>
 </html>
