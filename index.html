@@ -31,7 +31,7 @@
         height: -moz-fit-content;
         height: fit-content;
     }
-    .inner-container {
+    .section-container {
         width: var(--prompt-width);
         position:relative;
         display: flex;
@@ -43,14 +43,23 @@
         border-radius: var(--border-radius-outer);
         grid-area: var(--page-background-alignment);
     }
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 540px;
+        min-height: var(--prompt-min-height);
+    }
 </style>
 <script async src="https://sdk.arengu.com/forms.js"></script>
 </head>
 <body>
   <div class="outer-container">
       <main class="main-container">
-          <section class="inner-container">
-            <div data-arengu-form-id="167606036368751153"></div>
+          <section class="section-container">
+              <div class="inner-container">
+                <div data-arengu-form-id="167606036368751153"></div>
+              </div>
           </section>
       </main>
   </div>
