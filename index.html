@@ -43,6 +43,25 @@
         border-radius: var(--border-radius-outer);
         grid-area: var(--page-background-alignment);
     }
+    .box {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        font-size: 14px;
+        font-size: var(--default-font-size);
+        color: #2d333a;
+        color: var(--font-default-color);
+        background-color: #fff;
+        background-color: var(--widget-background-color);
+        box-shadow: 0 12px 40px rgb(0 0 0 / 12%);
+        box-shadow: var(--shadow-component-outer);
+        border-radius: 5px;
+        border-radius: var(--border-radius-outer);
+        border: 0 solid transparent;
+        border: var(--box-border-width) var(--box-border-style) var(--box-border-color);
+    } 
     .inner-container {
         display: flex;
         flex-direction: column;
@@ -57,8 +76,10 @@
   <div class="outer-container">
       <main class="main-container">
           <section class="section-container">
-              <div class="inner-container">
-                <div data-arengu-form-id="167606036368751153"></div>
+              <div class="box">
+                  <div class="inner-container">
+                    <div data-arengu-form-id="167606036368751153"></div>
+                  </div>
               </div>
           </section>
       </main>
